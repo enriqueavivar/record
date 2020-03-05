@@ -1,0 +1,434 @@
+<resources>
+    <string name="app_name">Record Report</string>
+
+    <string name="modelo_puerta_label">Modelo de puerta</string>
+    <string name="anio_puerta_label">Año de puerta</string>
+    <string name="estado_carril_label">Estado del carril</string>
+    <string name="estado_carros_label">Estado de los carros</string>
+    <string name="motor_label">Motor</string>
+    <string name="electronica_label">Electrónica</string>
+    <string name="correa_label">Correa</string>
+    <string name="cerrojo_label">Cerrojo</string>
+    <string name="selector_label">Selector</string>
+    <string name="hojas_label">Hojas</string>
+    <string name="mecanismo_label">Mecanismo</string>
+    <string name="cajon_label">Cajón</string>
+    <string name="deteccion_label">Detección</string>
+    <string name="proteccion_label">Protección</string>
+    <string name="tiempo_trabajo_label">Tiempo de trabajo</string>
+    <string name="bateria_label">Batería</string>
+    <string name="guias_label">Guías</string>
+    <string name="gomas_label">Gomas</string>
+    <string name="cableado_label">Cableado</string>
+    <string name="desbloqueo_label">Desbloqueo</string>
+    <string name="modelo_radares_label">Modelo radares</string>
+    <string name="modelo_baterias_label">Modelo baterías</string>
+    <string name="modelo_electronicas_label">Modelo electrónicas</string>
+    <string name="modelo_cerrojos_label">Modelo cerrojos</string>
+    <string name="modelo_motores_label">Modelo motores</string>
+    <string name="modelo_guias_label">Modelo guías</string>
+    <string name="modelo_selectores_label">Modelo selectores</string>
+    <string name="modelo_carros_label">Modelo carros</string>
+    <string name="modelo_poleas_label">Modelo poleas</string>
+    <string name="modelo_puertas_label">Modelo puertas</string>
+    <string name="modelo_correas_label">Modelo de correas</string>
+
+    <!--  Formulario de avería  -->
+    <string-array name="modelo_puerta">
+        <item>Selecciona un valor</item>
+        <item>STA 12</item>
+        <item>STA 13</item>
+        <item>STA 14</item>
+        <item>STA 15</item>
+        <item>STA 16</item>
+        <item>STA 17</item>
+        <item>STA 18</item>
+        <item>STA 19</item>
+        <item>STA 20</item>
+        <item>STA 21</item>
+        <item>STA 22</item>
+        <item>FTA</item>
+        <item>FBO</item>
+        <item>DFA 125</item>
+        <item>DFA 126</item>
+        <item>DFA 127</item>
+        <item>RST</item>
+        <item>IBST</item>
+        <item>ABST</item>
+        <item>K31</item>
+        <item>K41</item>
+    </string-array>
+
+    <string-array name="anio_puerta">
+        <item>Selecciona un valor</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+    </string-array>
+
+    <string-array name="estado_carril">
+        <item>Selecciona un valor</item>
+        <item>Bueno estado</item>
+        <item>Con desgaste, cambio recommendado max 12 meses</item>
+        <item>Dañado ocasionando ruido y deterioro de ruedas</item>
+        <item>Cambiar carril completo</item>
+        <item>Marcas de daños por golpe</item>
+        <item>Goma isofonica sesgastada</item>
+        <item>Perfil de rodadura deformado</item>
+    </string-array>
+
+    <string-array name="estado_carros">
+        <item>Selecciona un valor</item>
+        <item>todo el conjunto</item>
+        <item>2 carros exteriores</item>
+        <item>2 carros centro</item>
+        <item>buen estado</item>
+        <item>rodamientos de ruedas gripados</item>
+        <item>contraruedas dañadas</item>
+        <item>ruedas deformadas</item>
+    </string-array>
+
+    <string-array name="motor_averia">
+        <item>Selecciona un valor</item>
+        <item>Buen estado</item>
+        <item>Numero de ciclos > 1.M</item>
+        <item>Numero de ciclos > 1,5M</item>
+        <item>Numero de ciclos > 2.M</item>
+        <item>Numero de ciclos > 3.M</item>
+        <item>Desgaste 50% de vida util</item>
+        <item>Desgaste 60% de vida util</item>
+        <item>Desgaste 80% de vida util</item>
+        <item>Desgaste 100% de vida util</item>
+        <item>Ruido de escobillas</item>
+        <item>Ruido en reductora</item>
+        <item>Encoder defectuoso</item>
+        <item>Fijacion motor floja</item>
+        <item>Polea motor defectuosa</item>
+        <item>Dientes polea gastados</item>
+        <item>Cambiar motor en 12M</item>
+        <item>Cambiar motor en 15m</item>
+        <item>Motor defectuoso</item>
+        <item>Motor fuera de servicio</item>
+        <item>Motor averiado</item>
+        <item>Cambiar motor</item>
+        <item>Gripado</item>
+    </string-array>
+
+    <string-array name="electronica">
+        <item>Selecciona un valor</item>
+        <item>Buen estado</item>
+        <item>Averiada</item>
+        <item>No tiene tension alterna</item>
+        <item>Fusible fundido</item>
+        <item>Cortocircuito</item>
+        <item>Sin salida tension continua</item>
+        <item>Fallo en microprocesadodor</item>
+        <item>Fallo en cpu1</item>
+        <item>Fallo en cpu2</item>
+        <item>Fallo memoria eeprom</item>
+        <item>Fallo en coexionado de entrada</item>
+    </string-array>
+
+    <string-array name="correa">
+        <item>Selecciona un valor</item>
+        <item>Buen estado</item>
+        <item>Cambiar</item>
+        <item>Reseca</item>
+        <item>Deformada</item>
+        <item>Sin lubricante</item>
+        <item>Con grietas</item>
+    </string-array>
+
+    <string-array name="cerrojo">
+        <item>Selecciona un valor</item>
+        <item>sin</item>
+        <item>buen estado</item>
+        <item>averiado</item>
+        <item>gripado</item>
+        <item>no retorna señal a la electronica</item>
+        <item>El teton de activacion esta gripado</item>
+        <item>la bobima esta dañada</item>
+        <item>la conexión esta dañada</item>
+    </string-array>
+
+    <string-array name="selector">
+        <item>Selecciona un valor</item>
+
+        <item>Buen estado</item>
+        <item>averiado</item>
+        <item>funciones inactivas</item>
+        <item>teclas defectuosas</item>
+        <item>pantalla sin luz</item>
+        <item>desgaste de uso</item>
+    </string-array>
+
+    <string-array name="hojas">
+        <item>Selecciona un valor</item>
+
+        <item>Buen estado</item>
+        <item>hojas en buen estado</item>
+        <item>rotura en cristales</item>
+        <item>perfilria en mal estado por golpe</item>
+        <item>piezas de union de perfviles en mal estado</item>
+    </string-array>
+
+    <string-array name="mecanismo_completo">
+        <item>Selecciona un valor</item>
+        <item>200</item>
+        <item>108</item>
+        <item>150</item>
+    </string-array>
+
+    <string-array name="cajon">
+        <item>Selecciona un valor</item>
+        <item>Conservar</item>
+        <item>quitar</item>
+        <item>golpeado</item>
+        <item>perfecto estado</item>
+    </string-array>
+
+    <string-array name="deteccion">
+        <item>Selecciona un valor</item>
+        <item>deteccion correcta</item>
+        <item>nueva regulacion</item>
+        <item>no cumle normativa</item>
+        <item>cumple con normativa</item>
+        <item>suciedad de radar</item>
+        <item>golpeado</item>
+        <item>modificada situacion</item>
+    </string-array>
+
+    <string-array name="proteccion">
+        <item>Selecciona un valor</item>
+        <item>seguridad correcta</item>
+        <item>nueva regulacion</item>
+        <item>cumple con normativa 16005</item>
+        <item>no cumple con normativa 16005</item>
+        <item>golpeado</item>
+        <item>modificacion de su fijacion inicial</item>
+        <item>suciedad del radar.</item>
+    </string-array>
+
+    <string-array name="tiempo_trabajo">
+        <item>Selecciona un valor</item>
+        <item>1h</item>
+        <item>2h</item>
+        <item>3h</item>
+        <item>4h</item>
+        <item>5h</item>
+        <item>6h</item>
+        <item>7h</item>
+        <item>8h</item>
+    </string-array>
+
+    <string-array name="bateria">
+        <item>Selecciona un valor</item>
+        <item>Desgastada</item>
+        <item>baja tension</item>
+        <item>mal estado</item>
+        <item>caducada</item>
+    </string-array>
+
+    <string-array name="guias">
+        <item>Selecciona un valor</item>
+        <item>Desgastada</item>
+        <item>forzada</item>
+        <item>golpeada</item>
+    </string-array>
+
+    <string-array name="gomas">
+        <item>Selecciona un valor</item>
+        <item>Desgastada</item>
+        <item>reseca</item>
+        <item>deformada</item>
+        <item>Perfecta</item>
+    </string-array>
+
+
+    <string-array name="cableado">
+        <item>Selecciona un valor</item>
+        <item>en perfecto estado</item>
+        <item>descolocado</item>
+        <item>deteriorado</item>
+    </string-array>
+
+    <string-array name="desbloqueo">
+        <item>Selecciona un valor</item>
+        <item>fuaniona correctamnte</item>
+        <item>cable destensado</item>
+        <item>forzado</item>
+        <item>Cable roto</item>
+    </string-array>
+
+    <string-array name="modelo_radares">
+        <item>Selecciona un valor</item>
+        <item>Ric 290 ac</item>
+        <item>Ric290 gc</item>
+        <item>290 Ac</item>
+        <item>290 Ar</item>
+        <item>290 Gk</item>
+        <item>ixio dt1</item>
+        <item>290 Gc</item>
+        <item>ixio dp1</item>
+        <item>rc swin</item>
+        <item>290 ais super</item>
+        <item>290 ais empo</item>
+        <item>290 air super</item>
+        <item>290 ais empo</item>
+    </string-array>
+
+    <string-array name="modelo_baterias">
+        <item>Selecciona un valor</item>
+        <item>16 plomo normal 01654000</item>
+        <item>16 plomo redundante</item>
+        <item>litio 21</item>
+        <item>litio 17</item>
+        <item>litio 15</item>
+        <item>litio 14</item>
+        <item>litio 13</item>
+        <item>litio 12</item>
+        <item>20 plomo normal</item>
+        <item>20 plomo redundante</item>
+        <item>plomo flip flow</item>
+        <item>plomo plegable</item>
+    </string-array>
+
+    <string-array name="modelo_electronicas">
+        <item>Selecciona un valor</item>
+        <item>stg 16</item>
+        <item>stg 17</item>
+        <item>stg 20</item>
+        <item>stg 21</item>
+        <item>stg 21 red</item>
+        <item>stg 20 red/duo</item>
+        <item>stg 22 red/duo</item>
+        <item>stg 19</item>
+        <item>stg 19 red</item>
+    </string-array>
+
+    <string-array name="modelo_cerrojos">
+        <item>Selecciona un valor</item>
+        <item>vrr 16 normal</item>
+        <item>vrr 16 hi ha</item>
+        <item>vrr 20</item>
+        <item>mpv 16 normal</item>
+        <item>mpv 16 red</item>
+        <item>mpv 20 viga 200</item>
+        <item>mpv viga 108/150</item>
+        <item>vrr plegable</item>
+        <item>vrr flip flow</item>
+    </string-array>
+
+    <string-array name="modelo_motores">
+        <item>Selecciona un valor</item>
+        <item>motor 16 normal</item>
+        <item>motor 17</item>
+        <item>motor 16 pesado</item>
+        <item>motor 19</item>
+        <item>motor 20</item>
+        <item>motor 20 break</item>
+        <item>motor 20 / 200</item>
+        <item>motor 20/200 break</item>
+        <item>motor 21</item>
+        <item>motor 21 break</item>
+        <item>motor 16 plegable</item>
+        <item>motor 20 plegable</item>
+    </string-array>
+
+    <string-array name="modelo_guias">
+        <item>Selecciona un valor</item>
+        <item>doble 30 mm</item>
+        <item>doble 20 mm</item>
+        <item>lateral R 30 mm</item>
+        <item>lateral R 20 mm</item>
+        <item>lateral L 30 mm</item>
+        <item>lateral L 20 mm</item>
+        <item>doble 32 mm</item>
+        <item>doble 22 mm</item>
+        <item>lateral R 32 mm</item>
+        <item>lateral R 22 mm</item>
+        <item>lateral L 32 mm</item>
+        <item>lateral L 22 mm</item>
+        <item>telescopica doble 30 mm</item>
+        <item>telescopica doble 20 mm</item>
+        <item>telescopica R 30 mm</item>
+        <item>telescopica R 20 mm</item>
+        <item>Telescopica L 30 mm</item>
+        <item>telescopica L 20 mm</item>
+        <item>telescopica doble 32 mm</item>
+        <item>telescopcia doble 22 mm</item>
+        <item>telescopica R 32 mm</item>
+        <item>telescopica R 22 mm</item>
+        <item>telescopica l 32 mm</item>
+        <item>telescopica L 22 mm</item>
+    </string-array>
+
+    <string-array name="modelos_selectores">
+        <item>Selecciona un valor</item>
+        <item>bde d</item>
+        <item>bde e</item>
+        <item>bde m</item>
+        <item>bde m flip flow</item>
+    </string-array>
+
+    <string-array name="modelo_carros">
+        <item>Selecciona un valor</item>
+        <item>carros carril 200</item>
+        <item>carros carril 200 telesco</item>
+        <item>carros carril 108/150</item>
+        <item>carros carril 108/150 teles</item>
+    </string-array>
+
+    <string-array name="modelo_correas">
+        <item>Selecciona un valor</item>
+        <item>correa modulo 200</item>
+        <item>correa modulo 108/150</item>
+        <item>correa telescopica modulo 108/150</item>
+    </string-array>
+
+    <string-array name="modelo_poleas">
+        <item>Selecciona un valor</item>
+        <item>polea mecanismo 200</item>
+        <item>polea mecanismo 108/150</item>
+    </string-array>
+
+    <string-array name="modelo_puertas">
+        <item>Selecciona un valor</item>
+        <item>Dsta 20</item>
+        <item>Dsta 21</item>
+        <item>Esta R 20</item>
+        <item>Esta R 21</item>
+        <item>Dtsa 20</item>
+        <item>Dtsa 21</item>
+        <item>Etsa R 20</item>
+        <item>Etsa R 21</item>
+        <item>Etsa L 20</item>
+        <item>Etsa L 21</item>
+        <item>Fta</item>
+        <item>Fbo</item>
+        <item>Tos</item>
+    </string-array>
+    <string name="title_activity_inicio">Record Report</string>
+    <string name="title_activity_averia">Formulario de avería</string>
+    <string name="title_activity_instalacion">Formulario de instalación</string>
+    <string name="title_activity_generate_excel">GenerateExcelActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+</resources>

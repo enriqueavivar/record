@@ -1,0 +1,2 @@
+include ':app', ':droidText.0.4'
+rootProject.name='Record Report'
