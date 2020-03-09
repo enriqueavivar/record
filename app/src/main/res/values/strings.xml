@@ -431,4 +431,6 @@
     <string name="title_activity_generate_excel">GenerateExcelActivity</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_mantenimiento_flip_flow">Formulario de Mantenimiento Flip Flow</string>
+    <string name="title_activity_instalacion_flip_flow">Formulario de Instalación Flip Flow</string>
 </resources>
