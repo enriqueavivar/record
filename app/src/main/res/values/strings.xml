@@ -433,4 +433,12 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_mantenimiento_flip_flow">Formulario de Mantenimiento Flip Flow</string>
     <string name="title_activity_instalacion_flip_flow">Formulario de Instalación Flip Flow</string>
+    <string name="nombre_cliente">Nombre</string>
+    <string name="apellidos_cliente">Apellidos</string>
+    <string name="dni">DNI</string>
+    <string name="telefono_cliente_label">Teléfono</string>
+    <string name="email_cliente">Email</string>
+    <string name="cif_cliente">CIF</string>
+    <string name="empresa">Empresa</string>
+    <string name="direccion_empresa">dirección empresa</string>
 </resources>

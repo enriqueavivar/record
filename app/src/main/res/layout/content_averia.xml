@@ -12,13 +12,125 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="30dp"
             >
+            <TextView
+                android:id="@+id/nombre_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_cliente" />
+
+            <EditText
+                android:id="@+id/nombre_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/nombre_cliente" />
+
+            <TextView
+                android:id="@+id/apellido_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/apellidos_cliente" />
+
+            <EditText
+                android:id="@+id/apellido_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/apellidos_cliente" />
+
+            <TextView
+                android:id="@+id/dni_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dni" />
+
+            <EditText
+                android:id="@+id/dni_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/dni" />
+
+            <TextView
+                android:id="@+id/telefono_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telefono_cliente_label" />
+
+            <EditText
+                android:id="@+id/telefono_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/telefono_cliente_label" />
+
+            <TextView
+                android:id="@+id/email_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email_cliente" />
+
+            <EditText
+                android:id="@+id/email_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:text="@string/email_cliente" />
+
+            <TextView
+                android:id="@+id/cif_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cif_cliente" />
+
+            <EditText
+                android:id="@+id/cif_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/cif_cliente" />
+
+            <TextView
+                android:id="@+id/empresa_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/empresa" />
+
+            <EditText
+                android:id="@+id/empresa_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/empresa" />
+
+            <TextView
+                android:id="@+id/direccion_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/direccion_empresa" />
+
+            <EditText
+                android:id="@+id/direccion_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/direccion_empresa" />
+
+
             <TextView
                 android:id="@+id/modelo_puerta_averia_label"
                 android:layout_width="wrap_content"
