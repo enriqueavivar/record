@@ -282,6 +282,37 @@ public class AveriaActivity extends AppCompatActivity {
 
         // Create a path where we will place our List of objects on external storage
         File file = new File(context.getExternalFilesDir(null), fileName);
+
+
+       /* File directorio = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/RecordReport");
+        Log.w("dir", directorio.getPath());
+        File folder = new File(extStorageDirectory, "FolderName");
+        folder.mkdir();
+       boolean exito = true;
+       if (!directorio.exists()){
+           Log.w("dir", "directorio no existe, crealo");
+           directorio.mkdir();
+           exito=!exito;
+       }
+       if(exito){
+           Log.w("dir", "creado");
+       }else {
+           Log.w("dir", "no creado");
+       }*/
+
+        String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/RecordReport/Averias/";
+        File dir = new File(path);
+        boolean isDirectoryCreated = dir.exists();
+        if (!isDirectoryCreated) {
+            isDirectoryCreated = dir.mkdir();
+            Log.w("dir", "creado");
+        }
+        if (isDirectoryCreated) {
+            // do something\
+            Log.w("dir", "creado");
+        }
+
+
         FileOutputStream os = null;
 
         try {
@@ -349,6 +380,7 @@ public class AveriaActivity extends AppCompatActivity {
         };
 
         for (String s : valores_tabla) {
+            Log.e("valor datos: --", s);
             if (s.equals("Selecciona un valor")) {
                 return false;
             }
