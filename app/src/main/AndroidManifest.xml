@@ -12,6 +12,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".InstalacionFlipFlow"
+            android:label="@string/title_activity_instalacion_flip_flow"
+            android:parentActivityName=".InicioActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.recordreport.InicioActivity" />
+
+        </activity>
+        <activity android:name=".MantenimientoFlipFlow"
+            android:label="@string/title_activity_mantenimiento_flip_flow"
+            android:parentActivityName=".InicioActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.recordreport.InicioActivity" />
+        </activity>
+        <activity
+            android:name=".InstalacionActivity"
+            android:label="@string/title_activity_instalacion"
+            android:parentActivityName=".InicioActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.recordreport.InicioActivity" />
+        </activity>
+        <activity android:name=".MantenimientoActivity" />
         <activity
             android:name=".GenerateExcelActivity"
             android:label="@string/title_activity_generate_excel"

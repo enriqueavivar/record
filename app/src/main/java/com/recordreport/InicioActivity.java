@@ -66,6 +66,34 @@ public class InicioActivity extends AppCompatActivity {
         });
 
         Button btn_instalacion = (Button)findViewById(R.id.btn_instalacion_main);
+
+        btn_instalacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), InstalacionActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
+        Button btn_mantenimientoflipflow = findViewById(R.id.btn_mantenimiento_flip_main);
+
+        btn_mantenimientoflipflow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), MantenimientoFlipFlow.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
+        Button btn_instalacionflipflow = findViewById(R.id.btn_reparacion_flip_main);
+
+        btn_instalacionflipflow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (v.getContext(), InstalacionFlipFlow.class);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
 

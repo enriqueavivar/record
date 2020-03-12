@@ -1,14 +1,14 @@
 package com.recordreport;
 
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
@@ -31,9 +31,8 @@ import org.apache.poi.ss.usermodel.Workbook;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 
-public class AveriaActivity extends AppCompatActivity {
+public class InstalacionActivity extends AppCompatActivity {
     String nombre = "";
     String apellidos = "";
     String dni = "";
@@ -73,39 +72,38 @@ public class AveriaActivity extends AppCompatActivity {
     String modelo_correas = "";
     String modelo_poleas = "";
     String modelo_puertas = "";
-
-     Spinner modelo_puerta_spinner;
-     Spinner anio_puerta_spinner ;
-     Spinner estado_carril_spinner ;
-     Spinner estado_carros_spinner;
-     Spinner motor_averia_spinner;
-     Spinner electronica_spinner;
-     Spinner correa_spinner;
-     Spinner cerrojo_spinner;
-     Spinner selector_spinner;
-     Spinner hojas_spinner;
-     Spinner mecanismo_completo_spinner;
-     Spinner cajon_spinner;
-     Spinner deteccion_spinner;
-     Spinner proteccion_spinner;
-     Spinner tiempo_trabajo_spinner;
-     Spinner bateria_spinner;
-     Spinner guias_spinner;
-     Spinner gomas_spinner;
-     Spinner cableado_spinner;
-     Spinner desbloqueo_spinner;
-     Spinner modelo_radares_spinner;
-     Spinner modelo_baterias_spinner;
-     Spinner modelo_electronicas_spinner;
-     Spinner modelo_cerrojos_spinner;
-     Spinner modelo_motores_spinner;
-     Spinner modelo_guias_spinner;
-     Spinner modelo_selectores_spinner;
-     Spinner modelo_carros_spinner;
-     Spinner modelo_correas_spinner;
-     Spinner modelo_poleas_spinner;
-     Spinner modelo_puertas_spinner;
-     EditText nombre_edit;
+    Spinner modelo_puerta_spinner;
+    Spinner anio_puerta_spinner ;
+    Spinner estado_carril_spinner ;
+    Spinner estado_carros_spinner;
+    Spinner motor_averia_spinner;
+    Spinner electronica_spinner;
+    Spinner correa_spinner;
+    Spinner cerrojo_spinner;
+    Spinner selector_spinner;
+    Spinner hojas_spinner;
+    Spinner mecanismo_completo_spinner;
+    Spinner cajon_spinner;
+    Spinner deteccion_spinner;
+    Spinner proteccion_spinner;
+    Spinner tiempo_trabajo_spinner;
+    Spinner bateria_spinner;
+    Spinner guias_spinner;
+    Spinner gomas_spinner;
+    Spinner cableado_spinner;
+    Spinner desbloqueo_spinner;
+    Spinner modelo_radares_spinner;
+    Spinner modelo_baterias_spinner;
+    Spinner modelo_electronicas_spinner;
+    Spinner modelo_cerrojos_spinner;
+    Spinner modelo_motores_spinner;
+    Spinner modelo_guias_spinner;
+    Spinner modelo_selectores_spinner;
+    Spinner modelo_carros_spinner;
+    Spinner modelo_correas_spinner;
+    Spinner modelo_poleas_spinner;
+    Spinner modelo_puertas_spinner;
+    EditText nombre_edit;
     EditText apellidos_edit;
     EditText tlf_edit;
     EditText dni_edit;
@@ -135,11 +133,11 @@ public class AveriaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(checkFormValid()){
-                    Toast.makeText(AveriaActivity.this, "Archivo creado correctamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InstalacionActivity.this, "Archivo creado correctamente", Toast.LENGTH_SHORT).show();
                     createFile();
                 }
                 else{
-                    Toast.makeText(AveriaActivity.this, "Rellena todos los datos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(InstalacionActivity.this, "Rellena todos los datos", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -151,7 +149,6 @@ public class AveriaActivity extends AppCompatActivity {
             file.mkdir();
         }
     }
-
 
     private boolean saveExcelFile(Context context, String fileName) {
 
@@ -169,7 +166,7 @@ public class AveriaActivity extends AppCompatActivity {
 
         //New Sheet
         Sheet sheet1 = null;
-        sheet1 = wb.createSheet("Avería");
+        sheet1 = wb.createSheet("Instalación");
 
         // Generate column headings
         Row row = sheet1.createRow(0);
@@ -243,7 +240,7 @@ public class AveriaActivity extends AppCompatActivity {
                 cif,
                 empresa,
                 direccion,
-                "Avería",
+                "Instalación",
                 modelo_puerta,
                 anio_puerta,
                 estado_carril,
@@ -284,11 +281,12 @@ public class AveriaActivity extends AppCompatActivity {
             sheet1.setColumnWidth(i, (15 * 500));
         }
 
+
+
         // Create a path where we will place our List of objects on external storage
-        String dir = getApplicationContext().getExternalFilesDir(null)+ "/Averias/";
+        String dir = getApplicationContext().getExternalFilesDir(null)+ "/Instalacion/";
         File file = new File(dir, fileName);
         checkDirectory(dir);
-
 
         FileOutputStream os = null;
 
@@ -322,7 +320,7 @@ public class AveriaActivity extends AppCompatActivity {
                 cif = cif_edit.getText().toString(),
                 empresa = empresa_edit.getText().toString(),
                 direccion = direccion_edit.getText().toString(),
-                "Avería",
+                "Instalacion",
                 modelo_puerta = modelo_puertas_spinner.getSelectedItem().toString(),
                 anio_puerta = anio_puerta_spinner.getSelectedItem().toString(),
                 estado_carril = estado_carril_spinner.getSelectedItem().toString(),
@@ -357,7 +355,6 @@ public class AveriaActivity extends AppCompatActivity {
         };
 
         for (String s : valores_tabla) {
-            Log.e("valor datos: --", s);
             if (s.equals("Selecciona un valor") || s.equals("")) {
                 return false;
             }
@@ -372,12 +369,12 @@ public class AveriaActivity extends AppCompatActivity {
         if (Environment.MEDIA_MOUNTED.equals(state)) {
             if (Build.VERSION.SDK_INT >= 23) {
                 if (checkPermission()) {
-                    saveExcelFile(AveriaActivity.this, nombre+"_"+apellidos+"_"+System.currentTimeMillis()+".xls");
+                    saveExcelFile(InstalacionActivity.this, nombre+"_"+apellidos+"_"+System.currentTimeMillis()+".xls");
                 } else {
                     requestPermission(); // Code for permission
                 }
             } else {
-                saveExcelFile(AveriaActivity.this, nombre+"_"+apellidos+"_"+System.currentTimeMillis()+".xls");
+                saveExcelFile(InstalacionActivity.this, nombre+"_"+apellidos+"_"+System.currentTimeMillis()+".xls");
             }
         }
     }
@@ -386,7 +383,7 @@ public class AveriaActivity extends AppCompatActivity {
 
 
     private boolean checkPermission() {
-        int result = ContextCompat.checkSelfPermission(AveriaActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int result = ContextCompat.checkSelfPermission(InstalacionActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (result == PackageManager.PERMISSION_GRANTED) {
             return true;
         } else {
@@ -395,10 +392,10 @@ public class AveriaActivity extends AppCompatActivity {
     }
 
     private void requestPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(AveriaActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            Toast.makeText(AveriaActivity.this, "Write External Storage permission allows us to create files. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
+        if (ActivityCompat.shouldShowRequestPermissionRationale(InstalacionActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            Toast.makeText(InstalacionActivity.this, "Write External Storage permission allows us to create files. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
         } else {
-            ActivityCompat.requestPermissions(AveriaActivity.this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
+            ActivityCompat.requestPermissions(InstalacionActivity.this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
         }
     }
 
@@ -421,7 +418,6 @@ public class AveriaActivity extends AppCompatActivity {
      * Dar los valores al formulario
      */
     private void formularioAveria(){
-
         nombre_edit = findViewById(R.id.nombre_cliente);
         apellidos_edit = findViewById(R.id.apellido_cliente);
         tlf_edit = findViewById(R.id.telefono_cliente);
@@ -1008,25 +1004,4 @@ public class AveriaActivity extends AppCompatActivity {
 //        paragraph.add(childParagraph);
 //    }
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

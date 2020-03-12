@@ -1,21 +1,20 @@
 package com.recordreport;
 
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -31,17 +30,9 @@ import org.apache.poi.ss.usermodel.Workbook;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
 
-public class AveriaActivity extends AppCompatActivity {
-    String nombre = "";
-    String apellidos = "";
-    String dni = "";
-    String tlf = "";
-    String email = "";
-    String cif = "";
-    String empresa = "";
-    String direccion = "";
+public class MantenimientoActivity extends AppCompatActivity {
+
     String modelo_puerta = "";
     String anio_puerta = "";
     String estado_carril = "";
@@ -74,46 +65,6 @@ public class AveriaActivity extends AppCompatActivity {
     String modelo_poleas = "";
     String modelo_puertas = "";
 
-     Spinner modelo_puerta_spinner;
-     Spinner anio_puerta_spinner ;
-     Spinner estado_carril_spinner ;
-     Spinner estado_carros_spinner;
-     Spinner motor_averia_spinner;
-     Spinner electronica_spinner;
-     Spinner correa_spinner;
-     Spinner cerrojo_spinner;
-     Spinner selector_spinner;
-     Spinner hojas_spinner;
-     Spinner mecanismo_completo_spinner;
-     Spinner cajon_spinner;
-     Spinner deteccion_spinner;
-     Spinner proteccion_spinner;
-     Spinner tiempo_trabajo_spinner;
-     Spinner bateria_spinner;
-     Spinner guias_spinner;
-     Spinner gomas_spinner;
-     Spinner cableado_spinner;
-     Spinner desbloqueo_spinner;
-     Spinner modelo_radares_spinner;
-     Spinner modelo_baterias_spinner;
-     Spinner modelo_electronicas_spinner;
-     Spinner modelo_cerrojos_spinner;
-     Spinner modelo_motores_spinner;
-     Spinner modelo_guias_spinner;
-     Spinner modelo_selectores_spinner;
-     Spinner modelo_carros_spinner;
-     Spinner modelo_correas_spinner;
-     Spinner modelo_poleas_spinner;
-     Spinner modelo_puertas_spinner;
-     EditText nombre_edit;
-    EditText apellidos_edit;
-    EditText tlf_edit;
-    EditText dni_edit;
-    EditText email_edit;
-    EditText cif_edit;
-    EditText empresa_edit;
-    EditText direccion_edit;
-
     private static final int PERMISSION_REQUEST_CODE = 100;
 
 
@@ -135,22 +86,16 @@ public class AveriaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(checkFormValid()){
-                    Toast.makeText(AveriaActivity.this, "Archivo creado correctamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MantenimientoActivity.this, "Archivo creado correctamente", Toast.LENGTH_SHORT).show();
                     createFile();
                 }
                 else{
-                    Toast.makeText(AveriaActivity.this, "Rellena todos los datos", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MantenimientoActivity.this, "Rellena todos los datos", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
-    private void checkDirectory(String dir){
-        File file = new File(dir);
-        if (!file.exists()) {
-            file.mkdir();
-        }
-    }
 
 
     private boolean saveExcelFile(Context context, String fileName) {
@@ -175,14 +120,7 @@ public class AveriaActivity extends AppCompatActivity {
         Row row = sheet1.createRow(0);
 
         String[] valores = {
-                "Nombre",
-                "Apellidos",
-                "DNI",
-                "Teléfono",
-                "Email",
-                "CIF",
-                "Empresa",
-                "Dirección",
+                "Cliente",
                 "Trabajo a realizar",
                 "Modelo de puerta",
                 "Año de puerta",
@@ -235,14 +173,7 @@ public class AveriaActivity extends AppCompatActivity {
         }
 
         String[] valores_tabla = {
-                nombre,
-                apellidos,
-                dni,
-                tlf,
-                email,
-                cif,
-                empresa,
-                direccion,
+                "Cliente de prueba",
                 "Avería",
                 modelo_puerta,
                 anio_puerta,
@@ -284,12 +215,10 @@ public class AveriaActivity extends AppCompatActivity {
             sheet1.setColumnWidth(i, (15 * 500));
         }
 
+
+
         // Create a path where we will place our List of objects on external storage
-        String dir = getApplicationContext().getExternalFilesDir(null)+ "/Averias/";
-        File file = new File(dir, fileName);
-        checkDirectory(dir);
-
-
+        File file = new File(context.getExternalFilesDir(null), fileName);
         FileOutputStream os = null;
 
         try {
@@ -314,51 +243,43 @@ public class AveriaActivity extends AppCompatActivity {
     private boolean checkFormValid(){
 
         String[] valores_tabla = {
-                nombre = nombre_edit.getText().toString(),
-                apellidos = apellidos_edit.getText().toString(),
-                dni = dni_edit.getText().toString(),
-                tlf = tlf_edit.getText().toString(),
-                email = email_edit.getText().toString(),
-                cif = cif_edit.getText().toString(),
-                empresa = empresa_edit.getText().toString(),
-                direccion = direccion_edit.getText().toString(),
+                "Cliente de prueba",
                 "Avería",
-                modelo_puerta = modelo_puertas_spinner.getSelectedItem().toString(),
-                anio_puerta = anio_puerta_spinner.getSelectedItem().toString(),
-                estado_carril = estado_carril_spinner.getSelectedItem().toString(),
-                estado_carros = estado_carros_spinner.getSelectedItem().toString(),
-                motor_averia = motor_averia_spinner.getSelectedItem().toString(),
-                electronica = electronica_spinner.getSelectedItem().toString(),
-                correa = correa_spinner.getSelectedItem().toString(),
-                cerrojo = cerrojo_spinner.getSelectedItem().toString(),
-                selector = selector_spinner.getSelectedItem().toString(),
-                hojas = hojas_spinner.getSelectedItem().toString(),
-                mecanismo_completo = mecanismo_completo_spinner.getSelectedItem().toString(),
-                cajon = cajon_spinner.getSelectedItem().toString(),
-                deteccion = deteccion_spinner.getSelectedItem().toString(),
-                proteccion = proteccion_spinner.getSelectedItem().toString(),
-                tiempo_trabajo = tiempo_trabajo_spinner.getSelectedItem().toString(),
-                bateria = bateria_spinner.getSelectedItem().toString(),
-                guias = guias_spinner.getSelectedItem().toString(),
-                gomas = gomas_spinner.getSelectedItem().toString(),
-                cableado = cableado_spinner.getSelectedItem().toString(),
-                desbloqueo = desbloqueo_spinner.getSelectedItem().toString(),
-                modelo_radares = modelo_radares_spinner.getSelectedItem().toString(),
-                modelo_baterias = modelo_baterias_spinner.getSelectedItem().toString(),
-                modelo_electronicas = modelo_electronicas_spinner.getSelectedItem().toString(),
-                modelo_cerrojos = modelo_cerrojos_spinner.getSelectedItem().toString(),
-                modelo_motores = modelo_motores_spinner.getSelectedItem().toString(),
-                modelo_guias = modelo_guias_spinner.getSelectedItem().toString(),
-                modelo_selectores = modelo_selectores_spinner.getSelectedItem().toString(),
-                modelo_carros = modelo_carros_spinner.getSelectedItem().toString(),
-                modelo_correas = modelo_correas_spinner.getSelectedItem().toString(),
-                modelo_poleas = modelo_poleas_spinner.getSelectedItem().toString(),
-                modelo_puertas = modelo_puertas_spinner.getSelectedItem().toString(),
+                modelo_puerta,
+                anio_puerta,
+                estado_carril,
+                estado_carros,
+                motor_averia,
+                electronica,
+                correa,
+                cerrojo,
+                selector,
+                hojas,
+                mecanismo_completo,
+                cajon,
+                deteccion,
+                proteccion,
+                tiempo_trabajo,
+                bateria,
+                guias,
+                gomas,
+                cableado,
+                desbloqueo,
+                modelo_radares,
+                modelo_baterias,
+                modelo_electronicas,
+                modelo_cerrojos,
+                modelo_motores,
+                modelo_guias,
+                modelo_selectores,
+                modelo_carros,
+                modelo_correas,
+                modelo_poleas,
+                modelo_puertas,
         };
 
         for (String s : valores_tabla) {
-            Log.e("valor datos: --", s);
-            if (s.equals("Selecciona un valor") || s.equals("")) {
+            if (s.equals("Selecciona un valor")) {
                 return false;
             }
         }
@@ -372,12 +293,12 @@ public class AveriaActivity extends AppCompatActivity {
         if (Environment.MEDIA_MOUNTED.equals(state)) {
             if (Build.VERSION.SDK_INT >= 23) {
                 if (checkPermission()) {
-                    saveExcelFile(AveriaActivity.this, nombre+"_"+apellidos+"_"+System.currentTimeMillis()+".xls");
+                    saveExcelFile(MantenimientoActivity.this, "archivo.xls");
                 } else {
                     requestPermission(); // Code for permission
                 }
             } else {
-                saveExcelFile(AveriaActivity.this, nombre+"_"+apellidos+"_"+System.currentTimeMillis()+".xls");
+                saveExcelFile(MantenimientoActivity.this, "archivo.xsl");
             }
         }
     }
@@ -386,7 +307,7 @@ public class AveriaActivity extends AppCompatActivity {
 
 
     private boolean checkPermission() {
-        int result = ContextCompat.checkSelfPermission(AveriaActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int result = ContextCompat.checkSelfPermission(MantenimientoActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (result == PackageManager.PERMISSION_GRANTED) {
             return true;
         } else {
@@ -395,10 +316,10 @@ public class AveriaActivity extends AppCompatActivity {
     }
 
     private void requestPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(AveriaActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            Toast.makeText(AveriaActivity.this, "Write External Storage permission allows us to create files. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
+        if (ActivityCompat.shouldShowRequestPermissionRationale(MantenimientoActivity.this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            Toast.makeText(MantenimientoActivity.this, "Write External Storage permission allows us to create files. Please allow this permission in App Settings.", Toast.LENGTH_LONG).show();
         } else {
-            ActivityCompat.requestPermissions(AveriaActivity.this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
+            ActivityCompat.requestPermissions(MantenimientoActivity.this, new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE}, PERMISSION_REQUEST_CODE);
         }
     }
 
@@ -422,46 +343,38 @@ public class AveriaActivity extends AppCompatActivity {
      */
     private void formularioAveria(){
 
-        nombre_edit = findViewById(R.id.nombre_cliente);
-        apellidos_edit = findViewById(R.id.apellido_cliente);
-        tlf_edit = findViewById(R.id.telefono_cliente);
-        dni_edit = findViewById(R.id.dni_cliente);
-        email_edit = findViewById(R.id.email_cliente);
-        cif_edit = findViewById(R.id.cif_cliente);
-        empresa_edit = findViewById(R.id.empresa_cliente);
-        direccion_edit = findViewById(R.id.direccion_cliente);
 
-        modelo_puerta_spinner = (Spinner) findViewById(R.id.modelo_puerta_averia);
-        anio_puerta_spinner = (Spinner) findViewById(R.id.anio_puerta_averia);
-        estado_carril_spinner = (Spinner) findViewById(R.id.estado_carril_averia);
-        estado_carros_spinner = (Spinner) findViewById(R.id.estado_carros_averia);
-        motor_averia_spinner = (Spinner) findViewById(R.id.motor_averia);
-        electronica_spinner = (Spinner) findViewById(R.id.electronica_averia);
-        correa_spinner = (Spinner) findViewById(R.id.correa_averia);
-        cerrojo_spinner = (Spinner) findViewById(R.id.cerrojo_averia);
-        selector_spinner = (Spinner) findViewById(R.id.selector_averia);
-        hojas_spinner = (Spinner) findViewById(R.id.hojas_averia);
-        mecanismo_completo_spinner = (Spinner) findViewById(R.id.mecanismo_averia);
-        cajon_spinner = (Spinner) findViewById(R.id.cajon_averia);
-        deteccion_spinner = (Spinner) findViewById(R.id.deteccion_averia);
-        proteccion_spinner = (Spinner) findViewById(R.id.proteccion_averia);
-        tiempo_trabajo_spinner = (Spinner) findViewById(R.id.tiempo_trabajo_averia);
-        bateria_spinner = (Spinner) findViewById(R.id.bateria_averia);
-        guias_spinner = (Spinner) findViewById(R.id.guias_averia);
-        gomas_spinner = (Spinner) findViewById(R.id.gomas_averia);
-        cableado_spinner = (Spinner) findViewById(R.id.cableado_averia);
-        desbloqueo_spinner = (Spinner) findViewById(R.id.desbloqueo_averia);
-        modelo_radares_spinner = (Spinner) findViewById(R.id.modelo_radares_averia);
-        modelo_baterias_spinner = (Spinner) findViewById(R.id.modelo_baterias_averia);
-        modelo_electronicas_spinner = (Spinner) findViewById(R.id.modelo_electronicas_averia);
-        modelo_cerrojos_spinner = (Spinner) findViewById(R.id.modelo_cerrojos_averia);
-        modelo_motores_spinner = (Spinner) findViewById(R.id.modelo_motores_averia);
-        modelo_guias_spinner = (Spinner) findViewById(R.id.modelo_guias_averia);
-        modelo_selectores_spinner = (Spinner) findViewById(R.id.modelo_selectores_averia);
-        modelo_carros_spinner = (Spinner) findViewById(R.id.modelo_carros_averia);
-        modelo_correas_spinner = (Spinner) findViewById(R.id.modelo_correas_averia);
-        modelo_poleas_spinner = (Spinner) findViewById(R.id.modelo_poleas_averia);
-        modelo_puertas_spinner = (Spinner) findViewById(R.id.modelo_puertas_averia);
+        final Spinner modelo_puerta_spinner = (Spinner) findViewById(R.id.modelo_puerta_averia);
+        final Spinner anio_puerta_spinner = (Spinner) findViewById(R.id.anio_puerta_averia);
+        final Spinner estado_carril_spinner = (Spinner) findViewById(R.id.estado_carril_averia);
+        final Spinner estado_carros_spinner = (Spinner) findViewById(R.id.estado_carros_averia);
+        final Spinner motor_averia_spinner = (Spinner) findViewById(R.id.motor_averia);
+        final Spinner electronica_spinner = (Spinner) findViewById(R.id.electronica_averia);
+        final Spinner correa_spinner = (Spinner) findViewById(R.id.correa_averia);
+        final Spinner cerrojo_spinner = (Spinner) findViewById(R.id.cerrojo_averia);
+        final Spinner selector_spinner = (Spinner) findViewById(R.id.selector_averia);
+        final Spinner hojas_spinner = (Spinner) findViewById(R.id.hojas_averia);
+        final Spinner mecanismo_completo_spinner = (Spinner) findViewById(R.id.mecanismo_averia);
+        final Spinner cajon_spinner = (Spinner) findViewById(R.id.cajon_averia);
+        final Spinner deteccion_spinner = (Spinner) findViewById(R.id.deteccion_averia);
+        final Spinner proteccion_spinner = (Spinner) findViewById(R.id.proteccion_averia);
+        final Spinner tiempo_trabajo_spinner = (Spinner) findViewById(R.id.tiempo_trabajo_averia);
+        final Spinner bateria_spinner = (Spinner) findViewById(R.id.bateria_averia);
+        final Spinner guias_spinner = (Spinner) findViewById(R.id.guias_averia);
+        final Spinner gomas_spinner = (Spinner) findViewById(R.id.gomas_averia);
+        final Spinner cableado_spinner = (Spinner) findViewById(R.id.cableado_averia);
+        final Spinner desbloqueo_spinner = (Spinner) findViewById(R.id.desbloqueo_averia);
+        final Spinner modelo_radares_spinner = (Spinner) findViewById(R.id.modelo_radares_averia);
+        final Spinner modelo_baterias_spinner = (Spinner) findViewById(R.id.modelo_baterias_averia);
+        final Spinner modelo_electronicas_spinner = (Spinner) findViewById(R.id.modelo_electronicas_averia);
+        final Spinner modelo_cerrojos_spinner = (Spinner) findViewById(R.id.modelo_cerrojos_averia);
+        final Spinner modelo_motores_spinner = (Spinner) findViewById(R.id.modelo_motores_averia);
+        final Spinner modelo_guias_spinner = (Spinner) findViewById(R.id.modelo_guias_averia);
+        final Spinner modelo_selectores_spinner = (Spinner) findViewById(R.id.modelo_selectores_averia);
+        final Spinner modelo_carros_spinner = (Spinner) findViewById(R.id.modelo_carros_averia);
+        final Spinner modelo_correas_spinner = (Spinner) findViewById(R.id.modelo_correas_averia);
+        final Spinner modelo_poleas_spinner = (Spinner) findViewById(R.id.modelo_poleas_averia);
+        final Spinner modelo_puertas_spinner = (Spinner) findViewById(R.id.modelo_puertas_averia);
 
 
         //Modelo puerta
@@ -1009,24 +922,4 @@ public class AveriaActivity extends AppCompatActivity {
 //    }
 
 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
