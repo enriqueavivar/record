@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MantenimientoFlipFlow"
+    tools:showIn="@layout/activity_mantenimiento_flip_flow">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            >
+            <TextView
+                android:id="@+id/nombre_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre_cliente" />
+
+            <EditText
+                android:id="@+id/nombre_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/nombre_cliente" />
+
+            <TextView
+                android:id="@+id/apellido_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/apellidos_cliente" />
+
+            <EditText
+                android:id="@+id/apellido_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/apellidos_cliente" />
+
+            <TextView
+                android:id="@+id/dni_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dni" />
+
+            <EditText
+                android:id="@+id/dni_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/dni" />
+
+            <TextView
+                android:id="@+id/telefono_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/telefono_cliente_label" />
+
+            <EditText
+                android:id="@+id/telefono_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/telefono_cliente_label" />
+
+            <TextView
+                android:id="@+id/email_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email_cliente" />
+
+            <EditText
+                android:id="@+id/email_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:text="@string/email_cliente" />
+
+            <TextView
+                android:id="@+id/cif_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cif_cliente" />
+
+            <EditText
+                android:id="@+id/cif_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/cif_cliente" />
+
+            <TextView
+                android:id="@+id/empresa_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/empresa" />
+
+            <EditText
+                android:id="@+id/empresa_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/empresa" />
+
+            <TextView
+                android:id="@+id/direccion_cliente_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/direccion_empresa" />
+
+            <EditText
+                android:id="@+id/direccion_cliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/direccion_empresa" />
+
+
+            <TextView
+                android:id="@+id/modelo_puerta_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_puerta_label" />
+            <Spinner
+                android:id="@+id/modelo_puerta_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/anio_puerta_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/anio_puerta_label" />
+            <Spinner
+                android:id="@+id/anio_puerta_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/estado_carril_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estado_carril_label" />
+            <Spinner
+                android:id="@+id/estado_carril_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/estado_carros_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/estado_carros_label" />
+            <Spinner
+                android:id="@+id/estado_carros_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/motor_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/motor_label" />
+            <Spinner
+                android:id="@+id/motor_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/electronica_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/electronica_label" />
+            <Spinner
+                android:id="@+id/electronica_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/correa_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/correa_label" />
+            <Spinner
+                android:id="@+id/correa_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/cerrojo_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cerrojo_label" />
+            <Spinner
+                android:id="@+id/cerrojo_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/selector_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/selector_label" />
+            <Spinner
+                android:id="@+id/selector_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/hojas_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hojas_label" />
+            <Spinner
+                android:id="@+id/hojas_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/mecanismo_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mecanismo_label" />
+            <Spinner
+                android:id="@+id/mecanismo_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/cajon_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cajon_label" />
+            <Spinner
+                android:id="@+id/cajon_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/deteccion_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deteccion_label" />
+            <Spinner
+                android:id="@+id/deteccion_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/proteccion_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/proteccion_label" />
+            <Spinner
+                android:id="@+id/proteccion_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/tiempo_trabajo_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tiempo_trabajo_label" />
+            <Spinner
+                android:id="@+id/tiempo_trabajo_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/bateria_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bateria_label" />
+            <Spinner
+                android:id="@+id/bateria_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/guias_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/guias_label" />
+            <Spinner
+                android:id="@+id/guias_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/gomas_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gomas_label" />
+            <Spinner
+                android:id="@+id/gomas_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/cableado_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cableado_label" />
+            <Spinner
+                android:id="@+id/cableado_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/desbloqueo_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desbloqueo_label" />
+            <Spinner
+                android:id="@+id/desbloqueo_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_radares_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_radares_label" />
+            <Spinner
+                android:id="@+id/modelo_radares_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_baterias_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_baterias_label" />
+            <Spinner
+                android:id="@+id/modelo_baterias_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_electronicas_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_electronicas_label" />
+            <Spinner
+                android:id="@+id/modelo_electronicas_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_cerrojos_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_cerrojos_label" />
+            <Spinner
+                android:id="@+id/modelo_cerrojos_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_motores_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_motores_label" />
+            <Spinner
+                android:id="@+id/modelo_motores_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_guias_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_guias_label" />
+            <Spinner
+                android:id="@+id/modelo_guias_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_selectores_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_selectores_label" />
+            <Spinner
+                android:id="@+id/modelo_selectores_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_carros_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_carros_label" />
+            <Spinner
+                android:id="@+id/modelo_carros_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_correas_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_correas_label" />
+            <Spinner
+                android:id="@+id/modelo_correas_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_poleas_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_poleas_label" />
+            <Spinner
+                android:id="@+id/modelo_poleas_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/modelo_puertas_averia_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_puertas_label" />
+            <Spinner
+                android:id="@+id/modelo_puertas_averia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"/>
+
+            <Button
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_averia_send"
+                android:text="Crear PDF"
+                ></Button>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

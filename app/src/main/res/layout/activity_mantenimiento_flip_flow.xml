@@ -20,6 +20,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_averia" />
+    <include layout="@layout/content_mantenimiento_flip_flow" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
