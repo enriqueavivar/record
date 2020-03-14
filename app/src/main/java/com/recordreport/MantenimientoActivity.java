@@ -33,6 +33,11 @@ import java.io.IOException;
 
 public class MantenimientoActivity extends AppCompatActivity {
 
+
+
+
+
+
     String modelo_puerta = "";
     String anio_puerta = "";
     String estado_carril = "";
@@ -71,7 +76,7 @@ public class MantenimientoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_averia);
+        setContentView(R.layout.activity_mantenimiento);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

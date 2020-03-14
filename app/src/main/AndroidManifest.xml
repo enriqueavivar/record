@@ -12,16 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InstalacionFlipFlow"
+        <activity
+            android:name=".FilesActivity"
+            android:label="@string/title_activity_files"
+            android:parentActivityName=".InicioActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.recordreport.InicioActivity" />
+        </activity>
+        <activity
+            android:name=".InstalacionFlipFlow"
             android:label="@string/title_activity_instalacion_flip_flow"
             android:parentActivityName=".InicioActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.recordreport.InicioActivity" />
-
         </activity>
-        <activity android:name=".MantenimientoFlipFlow"
+        <activity
+            android:name=".MantenimientoFlipFlow"
             android:label="@string/title_activity_mantenimiento_flip_flow"
             android:parentActivityName=".InicioActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -64,6 +74,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name=".util.GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
     </application>
 
 </manifest>

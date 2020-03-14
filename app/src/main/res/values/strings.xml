@@ -390,10 +390,10 @@
 
     <string-array name="modelo_carros">
         <item>Selecciona un valor</item>
-        <item>carros carril 200</item>
-        <item>carros carril 200 telesco</item>
-        <item>carros carril 108/150</item>
-        <item>carros carril 108/150 teles</item>
+        <item>Carros carril 200</item>
+        <item>Carros carril 200 telesco</item>
+        <item>Carros carril 108/150</item>
+        <item>Carros carril 108/150 teles</item>
     </string-array>
 
     <string-array name="modelo_correas">
@@ -405,8 +405,8 @@
 
     <string-array name="modelo_poleas">
         <item>Selecciona un valor</item>
-        <item>polea mecanismo 200</item>
-        <item>polea mecanismo 108/150</item>
+        <item>Polea mecanismo 200</item>
+        <item>Polea mecanismo 108/150</item>
     </string-array>
 
     <string-array name="modelo_puertas">
@@ -440,5 +440,7 @@
     <string name="email_cliente">Email</string>
     <string name="cif_cliente">CIF</string>
     <string name="empresa">Empresa</string>
-    <string name="direccion_empresa">dirección empresa</string>
+    <string name="direccion_empresa">Dirección de la empresa</string>
+    <string name="btn_crear_archivo">Crear archivo</string>
+    <string name="title_activity_files">Archivos creados</string>
 </resources>

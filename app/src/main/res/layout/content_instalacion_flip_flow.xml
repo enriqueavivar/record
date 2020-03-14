@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/nombre_cliente" />
+                android:hint="@string/nombre_cliente" />
 
             <TextView
                 android:id="@+id/apellido_cliente_label"
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/apellidos_cliente" />
+                android:hint="@string/apellidos_cliente" />
 
             <TextView
                 android:id="@+id/dni_cliente_label"
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/dni" />
+                android:hint="@string/dni" />
 
             <TextView
                 android:id="@+id/telefono_cliente_label"
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
-                android:text="@string/telefono_cliente_label" />
+                android:hint="@string/telefono_cliente_label" />
 
             <TextView
                 android:id="@+id/email_cliente_label"
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textEmailAddress"
-                android:text="@string/email_cliente" />
+                android:hint="@string/email_cliente" />
 
             <TextView
                 android:id="@+id/cif_cliente_label"
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/cif_cliente" />
+                android:hint="@string/cif_cliente" />
 
             <TextView
                 android:id="@+id/empresa_cliente_label"
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/empresa" />
+                android:hint="@string/empresa" />
 
             <TextView
                 android:id="@+id/direccion_cliente_label"
@@ -128,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="@string/direccion_empresa" />
+                android:hint="@string/direccion_empresa" />
 
 
             <TextView
@@ -477,7 +477,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btn_averia_send"
-                android:text="Crear PDF"
+                android:text="Crear archivo"
                 ></Button>
         </LinearLayout>
     </ScrollView>

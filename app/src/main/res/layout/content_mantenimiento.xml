@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MantenimientoFlipFlow"
-    tools:showIn="@layout/activity_mantenimiento_flip_flow">
+    tools:context=".MantenimientoActivity"
+    tools:showIn="@layout/activity_mantenimiento">
 
 
     <ScrollView
@@ -132,352 +132,351 @@
 
 
             <TextView
-                android:id="@+id/modelo_puerta_averia_label"
+                android:id="@+id/modelo_puerta_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_puerta_label" />
             <Spinner
-                android:id="@+id/modelo_puerta_averia"
+                android:id="@+id/modelo_puerta_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/anio_puerta_averia_label"
+                android:id="@+id/anio_puerta_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/anio_puerta_label" />
             <Spinner
-                android:id="@+id/anio_puerta_averia"
+                android:id="@+id/anio_puerta_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/estado_carril_averia_label"
+                android:id="@+id/estado_carril_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/estado_carril_label" />
             <Spinner
-                android:id="@+id/estado_carril_averia"
+                android:id="@+id/estado_carril_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/estado_carros_averia_label"
+                android:id="@+id/estado_carros_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/estado_carros_label" />
             <Spinner
-                android:id="@+id/estado_carros_averia"
+                android:id="@+id/estado_carros_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/motor_averia_label"
+                android:id="@+id/motor_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/motor_label" />
             <Spinner
-                android:id="@+id/motor_averia"
+                android:id="@+id/motor_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/electronica_averia_label"
+                android:id="@+id/electronica_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/electronica_label" />
             <Spinner
-                android:id="@+id/electronica_averia"
+                android:id="@+id/electronica_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/correa_averia_label"
+                android:id="@+id/correa_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/correa_label" />
             <Spinner
-                android:id="@+id/correa_averia"
+                android:id="@+id/correa_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/cerrojo_averia_label"
+                android:id="@+id/cerrojo_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cerrojo_label" />
             <Spinner
-                android:id="@+id/cerrojo_averia"
+                android:id="@+id/cerrojo_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/selector_averia_label"
+                android:id="@+id/selector_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/selector_label" />
             <Spinner
-                android:id="@+id/selector_averia"
+                android:id="@+id/selector_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/hojas_averia_label"
+                android:id="@+id/hojas_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hojas_label" />
             <Spinner
-                android:id="@+id/hojas_averia"
+                android:id="@+id/hojas_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/mecanismo_averia_label"
+                android:id="@+id/mecanismo_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/mecanismo_label" />
             <Spinner
-                android:id="@+id/mecanismo_averia"
+                android:id="@+id/mecanismo_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/cajon_averia_label"
+                android:id="@+id/cajon_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cajon_label" />
             <Spinner
-                android:id="@+id/cajon_averia"
+                android:id="@+id/cajon_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/deteccion_averia_label"
+                android:id="@+id/deteccion_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/deteccion_label" />
             <Spinner
-                android:id="@+id/deteccion_averia"
+                android:id="@+id/deteccion_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/proteccion_averia_label"
+                android:id="@+id/proteccion_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/proteccion_label" />
             <Spinner
-                android:id="@+id/proteccion_averia"
+                android:id="@+id/proteccion_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/tiempo_trabajo_averia_label"
+                android:id="@+id/tiempo_trabajo_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tiempo_trabajo_label" />
             <Spinner
-                android:id="@+id/tiempo_trabajo_averia"
+                android:id="@+id/tiempo_trabajo_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/bateria_averia_label"
+                android:id="@+id/bateria_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/bateria_label" />
             <Spinner
-                android:id="@+id/bateria_averia"
+                android:id="@+id/bateria_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/guias_averia_label"
+                android:id="@+id/guias_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/guias_label" />
             <Spinner
-                android:id="@+id/guias_averia"
+                android:id="@+id/guias_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/gomas_averia_label"
+                android:id="@+id/gomas_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/gomas_label" />
             <Spinner
-                android:id="@+id/gomas_averia"
+                android:id="@+id/gomas_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/cableado_averia_label"
+                android:id="@+id/cableado_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cableado_label" />
             <Spinner
-                android:id="@+id/cableado_averia"
+                android:id="@+id/cableado_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/desbloqueo_averia_label"
+                android:id="@+id/desbloqueo_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/desbloqueo_label" />
             <Spinner
-                android:id="@+id/desbloqueo_averia"
+                android:id="@+id/desbloqueo_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_radares_averia_label"
+                android:id="@+id/modelo_radares_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_radares_label" />
             <Spinner
-                android:id="@+id/modelo_radares_averia"
+                android:id="@+id/modelo_radares_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_baterias_averia_label"
+                android:id="@+id/modelo_baterias_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_baterias_label" />
             <Spinner
-                android:id="@+id/modelo_baterias_averia"
+                android:id="@+id/modelo_baterias_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_electronicas_averia_label"
+                android:id="@+id/modelo_electronicas_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_electronicas_label" />
             <Spinner
-                android:id="@+id/modelo_electronicas_averia"
+                android:id="@+id/modelo_electronicas_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_cerrojos_averia_label"
+                android:id="@+id/modelo_cerrojos_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_cerrojos_label" />
             <Spinner
-                android:id="@+id/modelo_cerrojos_averia"
+                android:id="@+id/modelo_cerrojos_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_motores_averia_label"
+                android:id="@+id/modelo_motores_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_motores_label" />
             <Spinner
-                android:id="@+id/modelo_motores_averia"
+                android:id="@+id/modelo_motores_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_guias_averia_label"
+                android:id="@+id/modelo_guias_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_guias_label" />
             <Spinner
-                android:id="@+id/modelo_guias_averia"
+                android:id="@+id/modelo_guias_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_selectores_averia_label"
+                android:id="@+id/modelo_selectores_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_selectores_label" />
             <Spinner
-                android:id="@+id/modelo_selectores_averia"
+                android:id="@+id/modelo_selectores_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_carros_averia_label"
+                android:id="@+id/modelo_carros_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_carros_label" />
             <Spinner
-                android:id="@+id/modelo_carros_averia"
+                android:id="@+id/modelo_carros_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_correas_averia_label"
+                android:id="@+id/modelo_correas_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_correas_label" />
             <Spinner
-                android:id="@+id/modelo_correas_averia"
+                android:id="@+id/modelo_correas_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_poleas_averia_label"
+                android:id="@+id/modelo_poleas_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_poleas_label" />
             <Spinner
-                android:id="@+id/modelo_poleas_averia"
+                android:id="@+id/modelo_poleas_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <TextView
-                android:id="@+id/modelo_puertas_averia_label"
+                android:id="@+id/modelo_puertas_mantenimiento_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/modelo_puertas_label" />
             <Spinner
-                android:id="@+id/modelo_puertas_averia"
+                android:id="@+id/modelo_puertas_mantenimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"/>
 
             <Button
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_averia_send"
-                android:text="Crear archivo"
+                android:id="@+id/btn_mantenimiento_send"
+                android:text="@string/btn_crear_archivo"
                 ></Button>
         </LinearLayout>
     </ScrollView>

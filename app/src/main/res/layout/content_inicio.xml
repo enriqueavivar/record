@@ -22,67 +22,62 @@
 
         </TextView>
 
-<!--        <LinearLayout-->
-<!--            android:orientation="horizontal"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_weight="1">-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btn_averia_main"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Avería">
-            </Button>
+                android:text="Avería"></Button>
 
             <Button
                 android:id="@+id/btn_mantenimiento_main"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Mantenimiento">
-            </Button>
+                android:text="Mantenimiento"></Button>
 
-<!--        </LinearLayout>-->
+        </LinearLayout>
 
-<!--        <LinearLayout-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="1">-->
+        <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
             <Button
                 android:id="@+id/btn_instalacion_main"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Instalación">
-            </Button>
+                android:text="Instalación"></Button>
 
             <Button
                 android:id="@+id/btn_mantenimiento_flip_main"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Mantenimiento flip flow">
-            </Button>
+                android:text="Mantenimiento flip flow"></Button>
 
-<!--        </LinearLayout>-->
+        </LinearLayout>
 
-<!--        <LinearLayout-->
-<!--            android:orientation="horizontal"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_weight="1">-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/btn_reparacion_flip_main"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Instalación flip flow">
-            </Button>
+                android:text="Instalación flip flow"></Button>
 
             <TextView
                 android:layout_width="match_parent"
@@ -93,7 +88,22 @@
             </TextView>
 
 
-<!--        </LinearLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_ver_formularios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ver formularios creados"></Button>
+
+        </LinearLayout>
 
 
 

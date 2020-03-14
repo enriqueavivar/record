@@ -38,7 +38,6 @@ public class InicioActivity extends AppCompatActivity {
             //Verifica permisos para Android 6.0+
             checkExternalStoragePermission();
         }
-
     }
 
     @Override
@@ -60,7 +59,7 @@ public class InicioActivity extends AppCompatActivity {
         btn_mantenimiento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), GenerateExcelActivity.class);
+                Intent intent = new Intent (v.getContext(), MantenimientoActivity.class);
                 startActivityForResult(intent, 0);
             }
         });
@@ -91,6 +90,15 @@ public class InicioActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (v.getContext(), InstalacionFlipFlow.class);
+                startActivityForResult(intent, 0);
+            }
+        });
+
+        Button btn_verArchivos = findViewById(R.id.btn_ver_formularios);
+        btn_verArchivos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), FilesActivity.class);
                 startActivityForResult(intent, 0);
             }
         });
